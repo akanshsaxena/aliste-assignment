@@ -1,13 +1,320 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;600;700;900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.login {
+  background-image: linear-gradient(to right bottom,
+      #0f8abd,
+      #007dbd,
+      #006fbb,
+      #0061b8,
+      #0051b1,
+      #0051b1,
+      #0051b1,
+      #0051b1,
+      #0061b8,
+      #006fbb,
+      #007dbd,
+      #0f8abd);
+  height: 100vh;
+}
+
+.form-container {
+  width: 40%;
+  height: 60%;
+  background-color: #013080;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 25%;
+  left: 31.5%;
+  margin: -25px 0 0 -25px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  /* opacity: 0.8; */
+  padding: 20px 10px;
+}
+
+#title {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  font-size: 48px;
+}
+
+.form-container h2 {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  font-size: 32px;
+}
+
+.login-form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login-input {
+  outline: none;
+  width: 80%;
+  padding: 10px;
+  background: white;
+  color: black;
+  text-align: center;
+  opacity: 1;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+}
+
+.login-btn {
+  outline: none;
+  border: none;
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+  background: #1ab8cb;
+  color: white;
+  margin-top: 50px;
+  cursor: pointer;
+  translate: 0.3s ease all;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.login-btn:hover {
+  transform: scale(1.02);
+}
+
+/*Dashboard page*/
+
+.nav {
+  margin-left: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.nav h3 {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.selected {
+  background: white;
+  color: #007dbd;
+  padding: 5px 15px;
+  border-radius: 0.3rem;
+}
+
+.dashboard-container {
+  display: flex;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100vh;
+}
+
+.left {
+  background: #007dbd;
+  padding: 50px;
+  box-shadow: inset -6px -6px 14px -6px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-heading {
+  color: white;
+  font-size: 48px;
+}
+
+.dashboard-input {
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.search-btn {
+  padding: 8px;
+}
+
+.house-suggestions-container {
+  width: 50%;
+  padding: 10px;
+}
+
+.house-suggestions {
+  border-bottom: 2px solid #007dbd;
+  padding: 5px;
+  outline: none;
+}
+
+.house-suggestions:last-child {
+  border-bottom: none;
+}
+
+.device-detials-container {
+  padding: 50px;
+}
+
+.device-detials-container>h2 {
+  text-align: right;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+span {
+  font-weight: 600;
+}
+
+.house-room-details {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.device-owner {
+  padding: 10px;
+}
+
+.device-owner img {
+  width: 10%;
+}
+
+.device-owner h3 {
+  margin: 5px;
+  display: inline;
+}
+
+.move-left {
+  margin-left: 100px;
+  text-align: right;
+}
+
+.device-details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 20px 20px;
+}
+
+.device-details>div {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.device-details div div {
+  background: #007dbd;
+  color: white;
+  padding: 20px;
+  width: 250px;
+  /* border-radius: 1rem; */
+  box-shadow: -12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+}
+
+.device-details div div h3 {
+  font-size: 20px;
+}
+
+.device-details div div h5 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Device Analysis*/
+.device-analysis-container {
+  margin-top: 20px;
+  border: 1px solid #e2e2e2;
+}
+
+.column-container,
+.rows {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+
+.rows:last-child {
+  border-bottom: none;
+}
+
+.column-container p {
+  width: 20%;
+}
+
+.column-container p:first-child {
+  width: 25%;
+}
+
+.rows {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#total {
+  margin-top: 20px;
+}
+
+#total>span {
+  font-weight: 300;
+}
+
+#logout {
+  background: #007dbd;
+  padding: 5px 10px;
+  color: white;
+  position: fixed;
+  top: 25px;
+  left: 92%;
+  cursor: pointer;
+  border: none;
+}
+
+#logout:hover {
+  transform: scale(1.1);
+}
+
+.nothing-selected {
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  top: 25%;
+}
+
+.nothing-selected img {
+  width: 90%;
+}
+
+.nothing-selected h2 {
+  color: red;
+  font-size: 40px;
+  background: white;
+  position: absolute;
+  top: 70%;
+  right: -100px;
+  padding: 10px;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
 }
